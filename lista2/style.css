@@ -1,0 +1,12 @@
+#container{
+    border: 1px black solid;
+    width: 400px;
+    margin: 20px auto;
+    border-radius: 50px;
+    padding: 50px;
+}
+
+span{
+    color: purple;
+    font-weight: bold;
+}
