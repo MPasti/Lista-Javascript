@@ -117,7 +117,7 @@ function exe10(){
             divs++
         }
     }
-    if(divs == 2){
+    if(divs <= 2){
         primo += n;
     }
 }
