@@ -81,7 +81,7 @@ function exe08(){
 }
 
 function exe09(){
-    let idade, altura, peso, q, a;
+    let idade, altura, peso, q, a, midade;
     for(let i = 0; i >= 10; i++){
     idade = parseInt(prompt("Entre a idade: "))
     altura = parseInt(prompt("Digite a altura em cm: "));
@@ -94,6 +94,7 @@ function exe09(){
     if(idade >= 10 && idade <= 30 && altura >= 190){
         a++
     }
+    }
 
     let porc = (a*100)/10
     let media = midade/10
@@ -102,7 +103,6 @@ function exe09(){
     console.log("Pessoas com peso maior que 90 e altura menor que 1,50: ", q);
     console.log("Porcentagem de pessoas entre 10 e 30 com mais de 1,90: ", porc);
 
-    }
 }
 function exe10(){
     let n, par = 0, primo = 0, divs;
