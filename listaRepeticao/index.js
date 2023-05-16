@@ -121,6 +121,6 @@ function exe10(){
         primo += n;
     }
 }
-console.log(`Soma dos números pares: ${par}`);
-console.log("Soma dos números primos: ", primo);
+alert(`Soma dos números pares: ${par}`);
+alert(`Soma dos números primos:  ${primo}`);
 }
