@@ -171,6 +171,18 @@ function exe23(){
                 alert (`Novo salario ${novo}`); break 
                 
         case 2:
+        case 3: salario = Number(prompt("Informe salario"))
+                meses = Number(prompt("Informe meses"))
+                if((meses >=1)&&(meses <=12)){
+                    decimoTerceiro = salario + salario ^ meses/12
+                    alert(`Decimo terceiro ${decimoTerceiro}`)
+                }else{
+                    alert(`nro de meses invalido`)
+                }
+                break
+            case 4: alert(`Encerre o programa`); break
+            default: alert(`Opção invalida`); break
         }
     }
+    while(opcao != 4)
 }
