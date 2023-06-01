@@ -41,3 +41,32 @@ function exe02(){
     console.log(`Multiplos de 2 ${mult2} | quantidade de ${mult2.length}`)
     console.log(`Multiplos de 3 ${mult3} | quantidade de ${mult3.length}`)
 }
+function exe03(){
+    let codigos = []
+    let estoque = []
+    let achou = false
+    for(let i=0;i<5;i++){
+        codigos[i] = Number(prompt(`Informe o código do produto ${i+1}`))
+        estoque[i] = Number(prompt(`Informe o estoque do produto ${i+1}`))
+    }
+    let ciente = Number(prompt(`Informe o código do cliente`))
+    while(cliente != 0){
+        let codigo = Number(prompt(`Qual o código do produto para comprar`))
+        let qtde = Number(prompt(`Qual a qtde desejada para compra`))
+    
+        for(let i = 0; i<5; i++){
+            if(codigo == codigo[i]){
+                achou = true
+                //produto encontrado
+                estoque[i] = estoque[i] - qtde //atualiza o estoque
+            }
+            else{
+                alert(`Estoque insuficiente`)
+            }
+        }
+        if(!achou){
+            alert(`Produto não existe`)
+        }
+    }
+    alert(estoque)
+}
