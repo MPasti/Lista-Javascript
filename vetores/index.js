@@ -41,32 +41,68 @@ function exe02(){
     console.log(`Multiplos de 2 ${mult2} | quantidade de ${mult2.length}`)
     console.log(`Multiplos de 3 ${mult3} | quantidade de ${mult3.length}`)
 }
-function exe03(){
-    let codigos = []
-    let estoque = []
+
+function extra(){
     let achou = false
-    for(let i=0;i<5;i++){
-        codigos[i] = Number(prompt(`Informe o código do produto ${i+1}`))
-        estoque[i] = Number(prompt(`Informe o estoque do produto ${i+1}`))
+    let vetor = []
+    for(let i=0; i<4; i++){
+        vetor[i] = i;
+        if (vetor[i] == 3){
+            achou = true
+            console.log(`Elemento 3 foi encontrado`)
+        }
+    }  
+    if (!achou){  
+        console.log(`Elemento não encontrado`)  
     }
-    let ciente = Number(prompt(`Informe o código do cliente`))
-    while(cliente != 0){
-        let codigo = Number(prompt(`Qual o código do produto para comprar`))
-        let qtde = Number(prompt(`Qual a qtde desejada para compra`))
+}
+
+function exe03(){
+
+}
+
+function exe05(){
+    let logica = []
+    let linguagem = []
+    for(let i=0;i<10;i++){
+        logica[i] = Number(prompt(`Informe o aluno que faz lógica`))
+    }
+    for(let i=0; i<10; i++){
+        linguagem[i] = Number(prompt(`Informe o aluno que faz linguagem`))
+    }
+    //verifica alunos que fazem disciplinas em comum
+    let comum =[]
+    for(let i=0;i<10;i++){ // para cada aluno que faz Lógica
+        // verifica se está em Linguagem também
+        if(linguagem.includes(logica[i])){
+            comum.push(logica[i]) //adiciona o vetor comum
+        }
+    }
+    // vetor.indexOf('valor armazenado')
+    console.log(`Alunos que fazem ambas ${comum}`)
+}
+
+function exe06(){
+    let nomes = []
+    let salarios = []
+    for(let i = 0; i<10; i++){
+        nomes[i] = prompt(`Informe nome`)
+        salarios[i] = Number(prompt(`Informe o salário`))
+    }
+    //calcula maior e menor salário
+    let maior = salarios[0]
+    let menor = salarios[0]
+    for(let i=0;i<10;i++){
+       if(salarios[i] > maior){
+        maior = salarios[i]
+       }
+       if(salarios[i] < menor){
+        menor = salarios[í]
+       }
+    }
+    let nomeMaior = nomes[salarios.indexOf(maior)]
+    let nomeMenor = nomes[salarios.indexOf(menor)]
+    console.log(`${nomeMaior} vai receber o maior salário ${maior}`)
+    console.log(`${nomeMenor} vai receber o menor salário ${menor}`)
     
-        for(let i = 0; i<5; i++){
-            if(codigo == codigo[i]){
-                achou = true
-                //produto encontrado
-                estoque[i] = estoque[i] - qtde //atualiza o estoque
-            }
-            else{
-                alert(`Estoque insuficiente`)
-            }
-        }
-        if(!achou){
-            alert(`Produto não existe`)
-        }
-    }
-    alert(estoque)
 }
