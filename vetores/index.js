@@ -106,3 +106,18 @@ function exe06(){
     console.log(`${nomeMenor} vai receber o menor salário ${menor}`)
     
 }
+function exeSala(){
+    //Crie um código que lê 5 codigos e nomes de alunos diferentes, mas não recebe códigos repetidos
+    let codigo = [];
+    let nome = [];
+    for(let i = 0; i < 4; i++){
+        codigo[i] = Number(prompt(`Entre o código do ${i+1} aluno`));
+        let input = Number(prompt(`Insira o código do aluno`));
+
+        while(codigo.includes(input)){
+            input = Number(prompt(`Código já presente, insira outro`));
+        }
+        codigo[i] = input;
+        nome[i] = prompt(`Entre o código do aluno`);
+    }
+}
