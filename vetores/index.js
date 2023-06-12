@@ -78,15 +78,15 @@ function exe03(){
             est[i] = est[i] - qtd
             }
             else {
-                alert('Estoque insuficiente')
+                console.log('Estoque insuficiente')
             }
         }
     }
     if(!achou){
-        alert('Produto não existe')
+        console.log('Produto não existe')
     }
     }
-    alert(est)
+    console.log(est)
 }
 
 function exe4(){
@@ -101,7 +101,7 @@ function exe4(){
             posicao.push(i)
         }
     }
-    alert(`Posições em que o 30 aparece: ${posicao}`)
+    console.log(`Posições em que o 30 aparece: ${posicao}`)
 }
 
 function exe05(){
@@ -180,7 +180,7 @@ function exe07(){
             pos += nros[i] // += mesma coisa q pos = pos + nros[i]
         }
     }
-    alert(`Quantidade de nros negativos: ${neg}\nSoma dos nros positivos: ${pos}`)
+    console.log(`Quantidade de nros negativos: ${neg}\nSoma dos nros positivos: ${pos}`)
 }
 
 function exe08(){
@@ -195,10 +195,10 @@ function exe08(){
         }
         if(media[i] < 7){
             aprov = (media[i]/4) + 2.5
-            alert(`O aluno precisa tirar pelo menos ${aprov} no exame final para ser aprovado.`)
+            console.log(`O aluno precisa tirar pelo menos ${aprov} no exame final para ser aprovado.`)
         }
     }
-    alert(`O aluno com a maior média teve nota ${media[1]} e foi o ${nome[1]}`)
+    console.log(`O aluno com a maior média teve nota ${media[1]} e foi o ${nome[1]}`)
 }
 
 function exe09(){
@@ -226,6 +226,6 @@ function exe09(){
         }  
     }
     for(i = 0; i < 10; i++){
-        alert(`Nome do produto: ${nome[i]}\nCódigo do produto: ${cod[i]}\nPreço do produto: ${prc[i]}\nNovo preço do produto: ${novoprc[i]}`)
+        console.log(`Nome do produto: ${nome[i]}\nCódigo do produto: ${cod[i]}\nPreço do produto: ${prc[i]}\nNovo preço do produto: ${novoprc[i]}`)
     } 
 }
