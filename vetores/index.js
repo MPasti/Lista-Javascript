@@ -58,7 +58,50 @@ function extra(){
 }
 
 function exe03(){
+    let cod = []
+    let est = []
+    let achou = false
 
+    for(let i = 0; i < 5; i++){
+        cod[i] = Number(prompt(`Informe o código do produto ${i + 1}: `))
+        est[i] = Number(prompt(`Informe o estoque do produto ${i + 1}: `))
+    }
+    let cliente = Number(prompt('Informe o código do cliente'))
+    while(cliente != 0){
+    let codigo = Number(prompt('Qual o código do produto pra comprar'))
+    let qtd = Number(prompt('Qual a quantidade do produto no estoque'))
+
+    for(let i = 0; i < 5; i++){
+        if(codigo == cod[i]){
+            achou = true
+            if(est[i] >= qtd){
+            est[i] = est[i] - qtd
+            }
+            else {
+                alert('Estoque insuficiente')
+            }
+        }
+    }
+    if(!achou){
+        alert('Produto não existe')
+    }
+    }
+    alert(est)
+}
+
+function exe4(){
+    let vetor = []; 
+    posicao = [];
+
+    for(let i = 0; i < 3; i++){
+        vetor[i] = Number(prompt(`Entre com um número`))
+    }
+    for(let i = 0; i < 15; i++){
+        if(vetor[i].includes(30)){
+            posicao.push(i)
+        }
+    }
+    alert(`Posições em que o 30 aparece: ${posicao}`)
 }
 
 function exe05(){
@@ -120,4 +163,69 @@ function exeSala(){
         codigo[i] = input;
         nome[i] = prompt(`Entre o código do aluno`);
     }
+}
+
+function exe07(){
+    let nros = []; 
+    let i;
+    let neg = 0; 
+    let pos = 0;
+
+    for(i = 0; i < 10; i++){
+        nros[i] = Number(prompt('Informe um número (positivo ou negativo).'))
+        if(nros[i] < 0){
+            neg++
+        }
+        if(nros[i] >= 0){
+            pos += nros[i] // += mesma coisa q pos = pos + nros[i]
+        }
+    }
+    alert(`Quantidade de nros negativos: ${neg}\nSoma dos nros positivos: ${pos}`)
+}
+
+function exe08(){
+    let nome = []; let media = []; let i; let maior; let nmaiornota; let aprov
+
+    for(i = 0; i < 7; i++){
+        nome[i] = prompt('Informe o nome do aluno:')
+        media[i] = Number(prompt('Informe a média final do aluno:'))
+        if(media[i] > maior){
+            maior.pull(media[i])
+            nmaiornota.pull(nome[i])
+        }
+        if(media[i] < 7){
+            aprov = (media[i]/4) + 2.5
+            alert(`O aluno precisa tirar pelo menos ${aprov} no exame final para ser aprovado.`)
+        }
+    }
+    alert(`O aluno com a maior média teve nota ${media[1]} e foi o ${nome[1]}`)
+}
+
+function exe09(){
+ let nome = []; 
+ let cod = []; 
+ let prc = []; 
+ let i; 
+ let np = [];
+
+    for(i = 0; i < 10; i++){
+        nome[i] = prompt('Insira o nome do produto.')
+        cod[i] = Number(prompt('Insira o código do produto.'))
+        prc[i] = Number(prompt('Insira o preço do produto.'))
+        if((cod[i] % 2 == 0) && (prc[i] > 1000)){
+            np[i] = prc[i] * 1.2
+        }
+        else if(cod[i] % 2 == 0){
+            np[i] = prc[i] * 1.15
+        }
+        else if(prc[i] > 1000){
+            np[i] = prc[i] * 1.1
+        }
+        else{
+            np[i] = "Não mudou."
+        }  
+    }
+    for(i = 0; i < 10; i++){
+        alert(`Nome do produto: ${nome[i]}\nCódigo do produto: ${cod[i]}\nPreço do produto: ${prc[i]}\nNovo preço do produto: ${novoprc[i]}`)
+    } 
 }
