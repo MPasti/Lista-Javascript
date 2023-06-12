@@ -25,7 +25,6 @@ for (let i = 0; i < 10; i++){
         menor = qtdlikes[i]
         indiceMenor = i
     }
-    alert(titulo[i])
 }
     alert('Agora você poderá fazer 5 mudanças');
 for(let i = 0; i < 5; i++){
