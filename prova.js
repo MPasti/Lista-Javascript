@@ -1,7 +1,7 @@
-let titulo = []; let descricao = []; let autor = []; let qtdlikes = []; let usuario; let index; let maior = 0; let menor = 10000000; 
+let titulo = []; let descricao = []; let autor = []; let qtdlikes = []; let usuario; let index; let maior = 0; let menor = 10000000000000000000000000000; 
 let indiceMenor; let indiceMaior;
 
-for (let i = 0; i < 2; i++){
+for (let i = 0; i < 10; i++){
 
     titulo[i] = prompt(`Informe o ${i+1}º titulo`);
     descricao[i] = prompt(`Informe a ${i+1}º descricao`);
@@ -28,7 +28,7 @@ for (let i = 0; i < 2; i++){
     alert(titulo[i])
 }
     alert('Agora você poderá fazer 5 mudanças');
-for(let i = 0; i < 1; i++){
+for(let i = 0; i < 5; i++){
     usuario = prompt(`Entre o seu nome de usuário`)
     if(autor.includes(usuario)){
         index = autor.indexOf(usuario);
@@ -51,4 +51,5 @@ for(let i = 0; i < 1; i++){
 
 alert(`titulo e descrição dos posts com maior like: ${titulo[indiceMaior]} e ${descricao[indiceMaior]}`)
 alert(`titulo e descrição dos posts com menor like: ${titulo[indiceMenor]} e ${descricao[indiceMenor]}`)
+
 
